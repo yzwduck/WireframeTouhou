@@ -2,6 +2,8 @@
 
 Visualize Touhou hit-test.
 
+[Download latest build](https://ci.appveyor.com/project/yzwduck/wireframetouhou/build/artifacts)
+
 ## Usage
 
 * Launch game
@@ -9,7 +11,8 @@ Visualize Touhou hit-test.
 
 ## Important Note
 
-This tool will patch game's memory, please backup your save data in case of data loss.
+* Anti-virus software may block this tool, please whitelist the `.exe`, or consider build it from source.
+* This tool will patch game's memory, make sure you have backup 'score.dat' in case of **data loss**.
 
 ## Screenshot
 
