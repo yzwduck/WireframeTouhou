@@ -1,0 +1,51 @@
+#pragma code_page(65001)
+
+#include <Windows.h>
+#include <CommCtrl.h>
+#include <Richedit.h>
+#include <wingdi.h>
+
+#include "resource.h"
+
+#if 1
+
+LANGUAGE LANG_ENGLISH, SUBLANG_DEFAULT
+
+IDD_LAUNCHER DIALOGEX 0, 0, 300, 180
+STYLE DS_CENTER | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Wireframe Touhou Launcher"
+FONT 8, "MS Shell Dlg", FW_DONTCARE, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,189,159,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,243,159,50,14
+    CONTROL         "",IDC_LIST_PROCESS,"SysListView32",LVS_REPORT | LVS_OWNERDATA | LVS_ALIGNLEFT | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,7,120,166
+    LTEXT           "&Game",IDC_STATIC,135,10,35,8
+    COMBOBOX        IDC_COMBO_GAME,170,7,123,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Mode",IDC_STATIC,135,29,35,8
+    CONTROL         "Ingame hook",IDC_RADIO_MODE_HOOK,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,170,28,123,10
+    CONTROL         "More coming",IDC_RADIO_MODE_MORE,"Button",BS_AUTORADIOBUTTON | WS_DISABLED  | WS_TABSTOP,170,42,123,10
+    LTEXT           "&Scale",IDC_STATIC,135,60,35,8
+    CONTROL         "1.0x",IDC_RADIO_SCALE_10,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,170,59,60,10
+    CONTROL         "1.5x",IDC_RADIO_SCALE_15,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,230,59,60,10
+    CONTROL         "2.0x",IDC_RADIO_SCALE_20,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,170,73,60,10
+    CONTROL         "Auto",IDC_RADIO_SCALE_AUTO,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,230,73,60,10
+END
+
+STRINGTABLE
+BEGIN
+IDS_WARN_MISMATCH "The selected process does not match the game."
+IDS_WARN_INJECT "Cannot inject/hook into select game."
+IDS_TITLE_TH06 "TH06: Embodiment of Scarlet Devil"
+IDS_TITLE_TH07 "TH07: Perfect Cherry Blossom"
+IDS_TITLE_TH08 "TH08: Imperishable Night"
+// IDS_TITLE_TH09 "TH09: Phantasmagoria of Flower View"
+IDS_TITLE_TH10 "TH10: Mountain of Faith"
+IDS_TITLE_TH11 "TH11: Subterranean Animism"
+IDS_TITLE_TH12 "TH12: Undefined Fantastic Object"
+IDS_TITLE_TH13 "TH13: Ten Desires"
+IDS_TITLE_TH14 "TH14: Double Dealing Character"
+IDS_TITLE_TH15 "TH15: Legacy of Lunatic Kingdom"
+IDS_TITLE_TH16 "TH16: Hidden Star in Four Seasons"
+END
+
+#endif
