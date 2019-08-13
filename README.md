@@ -31,3 +31,4 @@ Note: circle with radius<5px is drawn as box.
 - TH14: Double Dealing Character (1.00b)
 - TH15: Legacy of Lunatic Kingdom (1.00b)
 - TH16: Hidden Star in Four Seasons (1.00a)
+- TH17: Wily Beast and Weakest Creature (1.00b)
