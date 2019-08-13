@@ -19,6 +19,7 @@
 #include "th14.h"
 #include "th15.h"
 #include "th16.h"
+#include "th17.h"
 
 #include "res/resource.h"
 
@@ -111,6 +112,8 @@ const TCHAR *DemoApp::GameTitleString(int id) const {
       return ResLoadString(IDS_TITLE_TH15);
     case th::Th16Reader::kGameId:
       return ResLoadString(IDS_TITLE_TH16);
+    case th::Th17Reader::kGameId:
+      return ResLoadString(IDS_TITLE_TH17);
     default:
       return TEXT("");
   }

@@ -11,6 +11,7 @@
 #include "th14.h"
 #include "th15.h"
 #include "th16.h"
+#include "th17.h"
 
 #pragma comment(lib, "psapi.lib")
 
@@ -68,6 +69,7 @@ static Th13Reader r13;
 static Th14Reader r14;
 static Th15Reader r15;
 static Th16Reader r16;
+static Th17Reader r17;
 
-StateReader *StateReader::instances[] = {&r10, &r11, &r12, &r13, &r14, &r15, &r16, nullptr};
+StateReader *StateReader::instances[] = {&r10, &r11, &r12, &r13, &r14, &r15, &r16, &r17, nullptr};
 }
